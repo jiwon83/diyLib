@@ -12,4 +12,14 @@ public class ArrayUtils {
         }
         return result;
     }
+
+    /** 배열의 deepCopy*/
+    public int [] deepCopyIntArr(int [] params){
+        int cnt =0;
+        int [] result = new int[params.length];
+        for (int i : params) result[cnt++]= i;
+        System.out.println(Arrays.toString(result));
+        return result;
+
+    }
 }

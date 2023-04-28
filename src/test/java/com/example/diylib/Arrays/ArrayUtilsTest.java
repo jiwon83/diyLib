@@ -14,8 +14,15 @@ class ArrayUtilsTest {
 
 
     @Test
-    void TestStrToIntArr(){
+    void testStrToIntArr(){
         assertThat(arrayUtils.strToIntArr("1234")).isEqualTo(new int[]{1,2,3,4});
+    }
+
+    @Test
+    void testDeepCopyIntArr(){
+        int [] input = new int[]{1,2,3};
+        int [] result = arrayUtils.deepCopyIntArr(input);
+        assertThat(result).isNotSameAs(input);
     }
 
 }
